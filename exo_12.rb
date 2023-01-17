@@ -1,15 +1,19 @@
 puts "Quel âge avez-vous ?"
-user_age = gets.chomp.to_i
+age = gets.chomp.to_i
 
-age_tmp = user_age
-middle = user_age / 2
-
-loop do 
-  puts "Il y a #{age_tmp}, tu avais #{user_age - age_tmp} ans"
-  age_tmp -= 1
-  if age_tmp == middle
-    puts "Il y a #{age_tmp}, tu avais la moitié de l'âge que tu as aujourd'hui"
-  elsif age_tmp == 0
-    break
-  end
+i = 0
+age.times do 
+    if i == 0
+        puts "Il y a #{age} ans, tu venais de naître."
+    elsif i == 1
+        puts "Il y a #{age} ans, tu avais #{i} an."
+    elsif age == 1
+        puts "Il y a #{age} an, tu avais #{i} ans."         
+    elsif age == i
+        puts "Il y a #{age} ans, tu avais la moitié de l'âge que tu as aujourd'hui."
+    else
+        puts "Il y a #{age} ans, tu avais #{i} ans."
+    end
+    age -= 1
+    i += 1
 end
