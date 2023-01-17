@@ -10,4 +10,4 @@ i = 1
   i += 1
 end 
 
-puts emails.select.each_with_index { |_, i| i.odd? }
+puts emails.select.with_index { |_, i| i.odd? }
